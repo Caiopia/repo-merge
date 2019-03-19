@@ -1,6 +1,6 @@
 import Foundation
 
-class SwiftAssertion: Scenario {
+@objc(SwiftAssertion) class SwiftAssertion: Scenario {
     override func startBugsnag() {
       self.config.shouldAutoCaptureSessions = false;
       super.startBugsnag()

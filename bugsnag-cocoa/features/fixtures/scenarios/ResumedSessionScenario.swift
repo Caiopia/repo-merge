@@ -9,7 +9,7 @@
 import Foundation
 import Bugsnag
 
-internal class ResumedSessionScenario: Scenario {
+@objc(ResumedSessionScenario) class ResumedSessionScenario: Scenario {
     override func startBugsnag() {
         self.config.shouldAutoCaptureSessions = false;
         super.startBugsnag()

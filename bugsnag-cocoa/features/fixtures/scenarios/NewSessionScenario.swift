@@ -1,5 +1,5 @@
 //
-//  StoppedSessionScenario.swift
+//  NewSessionScenario.swift
 //  iOSTestApp
 //
 //  Created by Jamie Lynch on 19/02/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import Bugsnag
 
-internal class StoppedSessionScenario: Scenario {
+@objc(NewSessionScenario) class NewSessionScenario: Scenario {
     override func startBugsnag() {
         self.config.shouldAutoCaptureSessions = false;
         super.startBugsnag()
@@ -20,8 +20,11 @@ internal class StoppedSessionScenario: Scenario {
         Bugsnag.startSession()
         Bugsnag.notifyError(NSError(domain: "First error", code: 101, userInfo: nil))
 
-        // send 2nd exception which should not include session info
+        // stop tracking the existing session
         Bugsnag.stopSession()
+
+        // send 2nd exception which should contain new session info
+        Bugsnag.startSession()
         Bugsnag.notifyError(NSError(domain: "Second error", code: 101, userInfo: nil))
     }
 }

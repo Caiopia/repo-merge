@@ -9,7 +9,7 @@ import Bugsnag
 /**
  * Sends a handled Error to Bugsnag and overrides the exception name + message
  */
-class HandledErrorOverrideScenario: Scenario {
+@objc(HandledErrorOverrideScenario) class HandledErrorOverrideScenario: Scenario {
 
     override func startBugsnag() {
       self.config.shouldAutoCaptureSessions = false;

@@ -274,7 +274,8 @@
 				E7767F12221C21E30006648C /* ResumedSessionScenario.swift */,
 				E7767F14221C223C0006648C /* NewSessionScenario.swift */,
 			);
-			path = scenarios;
+			name = scenarios;
+			path = ../../scenarios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,9 +7,9 @@ import Foundation
 import Bugsnag
 
 /**
- * Sends a handled Error to Bugsnag
+ * Sends a handled Exception to Bugsnag
  */
-class HandledErrorScenario: Scenario {
+@objc(HandledExceptionScenario) class HandledExceptionScenario: Scenario {
 
     override func startBugsnag() {
       self.config.shouldAutoCaptureSessions = false;
@@ -17,8 +17,9 @@ class HandledErrorScenario: Scenario {
     }
 
     override func run() {
-        let error = NSError(domain: "HandledErrorScenario", code: 100, userInfo: nil)
-        Bugsnag.notifyError(error)
+        Bugsnag.notify(NSException(name: NSExceptionName("HandledExceptionScenario"),
+                reason: "Message: HandledExceptionScenario",
+                userInfo: nil))
     }
 
 }

@@ -7,18 +7,17 @@ import Foundation
 import Bugsnag
 
 /**
- * Sends a handled error to Bugsnag, which includes user data.
+ * Sends a handled error to Bugsnag, which does not include user data.
  */
-internal class UserEnabledScenario: Scenario {
-
+@objc(UserDisabledScenario) class UserDisabledScenario: Scenario {
     override func startBugsnag() {
       self.config.shouldAutoCaptureSessions = false;
       super.startBugsnag()
     }
 
     override func run() {
-        Bugsnag.configuration()?.setUser("123", withName: "Joe Bloggs", andEmail: "user@example.com")
-        let error = NSError(domain: "UserEnabledScenario", code: 100, userInfo: nil)
+        Bugsnag.configuration()?.setUser(nil, withName: nil, andEmail: nil)
+        let error = NSError(domain: "UserDisabledScenario", code: 100, userInfo: nil)
         Bugsnag.notifyError(error)
     }
 

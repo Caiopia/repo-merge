@@ -9,7 +9,7 @@ import Bugsnag
 /**
  * Sends a handled error to Bugsnag, which only includes a user's id
  */
-internal class UserIdScenario: Scenario {
+@objc(UserIdScenario) class UserIdScenario: Scenario {
 
     override func startBugsnag() {
       self.config.shouldAutoCaptureSessions = false;

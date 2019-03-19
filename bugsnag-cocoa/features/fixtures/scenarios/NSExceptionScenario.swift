@@ -11,7 +11,7 @@ class InvariantException: NSException {
 /**
  * Raises an NSException which should be received by Bugsnag
  */
-class NSExceptionScenario: Scenario {
+@objc(NSExceptionScenario) class NSExceptionScenario: Scenario {
 
     override func run() {
         let name = NSExceptionName("Invariant violation")
