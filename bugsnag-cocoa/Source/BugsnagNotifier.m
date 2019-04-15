@@ -73,10 +73,10 @@ static struct bugsnag_data_t bsg_g_bugsnag_data;
 
 static NSDictionary *notificationNameMap;
 
-static char *sessionId[128];
-static char *sessionStartDate[128];
 static char *watchdogSentinelPath = NULL;
 static char *crashSentinelPath = NULL;
+static char *sessionId;
+static char *sessionStartDate;
 static NSUInteger handledCount;
 static bool hasRecordedSessions;
 
@@ -178,18 +178,17 @@ void BSGWriteSessionCrashData(BugsnagSession *session) {
         hasRecordedSessions = false;
         return;
     }
-    // copy session id
-    const char *newSessionId = [session.sessionId UTF8String];
-    size_t idSize = strlen(newSessionId);
-    strncpy((char *)sessionId, newSessionId, idSize);
-    sessionId[idSize - 1] = NULL;
-
-    const char *newSessionDate = [[BSG_RFC3339DateTool stringFromDate:session.startedAt] UTF8String];
-    size_t dateSize = strlen(newSessionDate);
-    strncpy((char *)sessionStartDate, newSessionDate, dateSize);
-    sessionStartDate[dateSize - 1] = NULL;
-
     // record info for C JSON serialiser
+    // copy session id, date, handledCount
+    if (sessionId != NULL) {
+        free(sessionId);
+    }
+    sessionId = strdup([session.sessionId UTF8String]);
+    if (sessionStartDate != NULL) {
+        free(sessionStartDate);
+    }
+    sessionStartDate = strdup([[BSG_RFC3339DateTool stringFromDate:session.startedAt] UTF8String]);
+
     handledCount = session.handledCount;
     hasRecordedSessions = true;
 }
