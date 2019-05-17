@@ -71,23 +71,22 @@ void bsg_kscrashsentry_reportUserException(const char *name,
             bsg_kscrashsentry_suspendThreads();
         }
 
+        BSG_KSLOG_DEBUG("Fetching call stack.");
+        int callstackCount = 100;
+        uintptr_t callstack[callstackCount];
+        callstackCount = backtrace((void **)callstack, callstackCount);
+        if (callstackCount <= 0) {
+            BSG_KSLOG_ERROR("backtrace() returned call stack length of %d",
+                            callstackCount);
+            callstackCount = 0;
+        }
+        BSG_KSLOG_DEBUG("Filling out stack context entries.");
+        bsg_g_context->stackTrace = callstack;
+        bsg_g_context->stackTraceLength = callstackCount;
 
         if (stackAddresses != NULL && stackLength > 0) {
             bsg_g_context->stackTrace = stackAddresses;
             bsg_g_context->stackTraceLength = (int)stackLength;
-        } else {
-            BSG_KSLOG_DEBUG("Fetching call stack.");
-            int callstackCount = 100;
-            uintptr_t callstack[callstackCount];
-            callstackCount = backtrace((void **)callstack, callstackCount);
-            if (callstackCount <= 0) {
-                BSG_KSLOG_ERROR("backtrace() returned call stack length of %d",
-                                callstackCount);
-                callstackCount = 0;
-            }
-            BSG_KSLOG_DEBUG("Filling out stack context entries.");
-            bsg_g_context->stackTrace = callstack;
-            bsg_g_context->stackTraceLength = callstackCount;
         }
 
         BSG_KSLOG_DEBUG("Filling out context.");
