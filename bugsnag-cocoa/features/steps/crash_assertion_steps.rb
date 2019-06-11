@@ -58,16 +58,16 @@ def assert_exception_matches_11_2(exception, stacktrace)
       frame = 2
     end
 
-    assert_equal(stacktrace[frame]["method"], "notify_check")
-    assert_equal(stacktrace[frame + 1]["method"], "notify_check_tz")
-    assert_equal(stacktrace[frame + 2]["method"], "tzsetwall_basic")
-    assert_equal(stacktrace[frame + 3]["method"], "localtime_r")
-    assert_equal(stacktrace[frame + 4]["method"], "_populateBanner")
-    assert_equal(stacktrace[frame + 5]["method"], "_CFLogvEx2Predicate")
-    assert_equal(stacktrace[frame + 6]["method"], "_CFLogvEx3")
-    assert_equal(stacktrace[frame + 7]["method"], "_NSLogv")
-    assert_equal(stacktrace[frame + 8]["method"], "NSLog")
-    assert_equal(stacktrace[frame + 9]["method"], "-[CorruptMallocScenario run]")
+    assert_equal("notify_check", stacktrace[frame]["method"])
+    assert_equal("notify_check_tz", stacktrace[frame + 1]["method"])
+    assert_equal("tzsetwall_basic", stacktrace[frame + 2]["method"])
+    assert_equal("localtime_r", stacktrace[frame + 3]["method"])
+    assert_equal("_populateBanner", stacktrace[frame + 4]["method"])
+    assert_equal("_CFLogvEx2Predicate", stacktrace[frame + 5]["method"])
+    assert_equal("_CFLogvEx3", stacktrace[frame + 6]["method"])
+    assert_equal("_NSLogv", stacktrace[frame + 7]["method"])
+    assert_equal("NSLog", stacktrace[frame + 8]["method"])
+    assert_equal("-[CorruptMallocScenario run]", stacktrace[frame + 9]["method"])
   else
     fail("The exception does not reflect malloc corruption")
   end
