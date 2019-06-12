@@ -3,35 +3,63 @@ cache:
   - bundler
   - cocoapods
 rvm: 2.4.3
-matrix:
-    include:
-        - osx_image: xcode9.4
-          env: PLATFORM=iOS
-          script:
-            - make test
-            - make test OS=10.3.1
-            - make test OS=9.3
-        - osx_image: xcode9.4
-          env: PLATFORM=OSX
-          script:
-            - make test
-        - osx_image: xcode9.4
-          env: PLATFORM=tvOS
-          script:
-            - make test
-            - make test OS=10.2
-            - make test OS=9.2
-        - osx_image: xcode10.1
-          env: MAZE_SDK=12.1 SDK=iphonesimulator12.1
-          script: bundle exec maze-runner -c || (cat maze_output/* && exit 1)
+env:
+  global:
+  - MAZE_SDK=12.1
+
 install: make bootstrap
 
-before_deploy: headerdoc2html -o docs Source -j; gatherheaderdoc docs; mv docs/masterTOC.html docs/index.html
+stages:
+- unit tests
+- end-to-end tests
+- name: deploy
+  if: tag IS present
 
-deploy:
-  provider: pages
-  local_dir: docs # only include the contents of the generated docs dir
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # set in travis-ci dashboard
-  on:
-    tags: true # only deploy when tag is applied to commit
+jobs:
+  include:
+  - stage: unit tests
+    osx_image: xcode9.4
+    env: PLATFORM=iOS
+    script:
+    - make test
+    - make test OS=10.3.1
+    - make test OS=9.3
+  - osx_image: xcode9.4
+    env: PLATFORM=OSX
+    script: make test
+  - osx_image: xcode9.4
+    env: PLATFORM=tvOS
+    script:
+    - make test
+    - make test OS=10.2
+    - make test OS=9.2
+
+  - stage: end-to-end tests
+    name: Handled errors
+    osx_image: xcode10.1
+    env: SDK=iphonesimulator12.1
+    script: bundle exec maze-runner -c features/{handled_errors,error_reporting_thread,user}.feature || (cat maze_output/* && exit 1)
+  - osx_image: xcode10.1
+    name: Runtime version reporting
+    env: SDK=iphonesimulator12.1
+    script: bundle exec maze-runner -c features/runtime_versions.feature || (cat maze_output/* && exit 1)
+  - osx_image: xcode10.1
+    name: Crash detection
+    env: SDK=iphonesimulator12.1
+    script: bundle exec maze-runner -c features/{crashprobe,minimal_crash}.feature || (cat maze_output/* && exit 1)
+  - osx_image: xcode10.1
+    name: Session tracking
+    env: SDK=iphonesimulator12.1
+    script: bundle exec maze-runner -c features/session_{tracking,stopping}.feature || (cat maze_output/* && exit 1)
+  - osx_image: xcode10.1
+    name: Out-of-memory detection
+    env: SDK=iphonesimulator12.1
+    script: bundle exec maze-runner -c features/out_of_memory.feature || (cat maze_output/* && exit 1)
+  - stage: deploy
+    script: skip
+    before_deploy: headerdoc2html -o docs Source -j; gatherheaderdoc docs; mv docs/masterTOC.html docs/index.html
+    deploy:
+      provider: pages
+      local_dir: docs # only include the contents of the generated docs dir
+      skip_cleanup: true
+      github_token: $GITHUB_TOKEN # set in travis-ci dashboard
