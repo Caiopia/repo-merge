@@ -21,6 +21,8 @@ end
 
 # Scenario hooks
 Before do
+  @test_counter ||= 0
+  @test_counter += 1
   # Name set in launch_ios_simulators.sh
   set_script_env('iOS_Simulator', 'maze-sim')
 end
