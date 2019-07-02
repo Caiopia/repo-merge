@@ -1,6 +1,7 @@
 import UIKit
 import Bugsnag
 
+// Create crash handler
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -50,6 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = BugsnagConfiguration()
         config.apiKey = apiKey
         config.setEndpoints(notify: mockAPIPath, sessions: mockAPIPath)
+        config.onCrashHandler = { writerPtr in
+            let writer = writerPtr.pointee
+            writer.addJSONElement(writerPtr, "someKey", "someValue")
+        }
         return config
     }
 
