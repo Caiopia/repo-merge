@@ -2,12 +2,25 @@ language: objective-c
 cache:
   - bundler
   - cocoapods
-matrix:
+
+install: make bootstrap
+
+stages:
+    - unit tests
+    - end-to-end tests
+    - name: deploy
+      if: tag IS present # only deploy when tag is applied to commit
+
+jobs:
     include:
         - osx_image: xcode11
+          stage: unit tests
+          name: iOS 13 unit tests
           env: PLATFORM=iOS
           script: make test OS=13.0 DEVICE="iPhone XS"
         - osx_image: xcode10.2
+          stage: unit tests
+          name: iOS 9-12 unit tests
           env: PLATFORM=iOS
           script:
             - make test OS=12.2
@@ -19,14 +32,20 @@ matrix:
           after_success:
             - bash <(curl -s 'https://codecov.io/bash') -Z -J '^Bugsnag$' -X gcov -X coveragepy -X fix -D build
         - osx_image: xcode10.2 # macos 10.14
+          stage: unit tests
+          name: macOS 10.14 unit tests
           env: PLATFORM=OSX
           script:
             - make test
         - osx_image: xcode9.4 # macos 10.13
+          stage: unit tests
+          name: macOS 10.13 unit tests
           env: PLATFORM=OSX
           script:
             - make test
         - osx_image: xcode10.2
+          stage: unit tests
+          name: tvOS 9-12 unit tests
           env: PLATFORM=tvOS
           script:
             - make test OS=12.2
@@ -35,19 +54,20 @@ matrix:
             - make test OS=10.2
             - make test OS=9.2
         - osx_image: xcode10.2
+          stage: end-to-end tests
+          name: iOS end-to-end tests
           script: bundle exec maze-runner -c || (cat maze_output/* && exit 1)
           env: MAZE_SDK=12.2 SDK=iphonesimulator12.2 RUBYSHELL=/bin/bash
         - osx_image: xcode10.1 # Backwards compat checks
+          stage: end-to-end tests
+          name: Swift compatibility tests
           script: bundle exec maze-runner -c --tags "@swift" || (cat maze_output/* && exit 1)
           env: MAZE_SDK=12.1 SDK=iphonesimulator12.1 RUBYSHELL=/bin/bash
-install: make bootstrap
-
-before_deploy: make doc
-
-deploy:
-  provider: pages
-  local_dir: docs # only include the contents of the generated docs dir
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # set in travis-ci dashboard
-  on:
-    tags: true # only deploy when tag is applied to commit
+        - stage: deploy
+          name: Deploy API docs
+          script: make doc
+          deploy:
+            provider: pages
+            local_dir: docs # only include the contents of the generated docs dir
+            skip_cleanup: true
+            github_token: $GITHUB_TOKEN # set in travis-ci dashboard
