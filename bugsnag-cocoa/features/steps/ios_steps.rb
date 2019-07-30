@@ -99,6 +99,15 @@ Then("each event with a session in the payload for request {int} matches one of:
   end
 end
 
+Then("the event is a Swift fatal error with message {string}") do |message|
+  # The Xcode version. Message is unsupported on newer versions, see #318
+  version = `xcodebuild -version | awk 'NR == 1{print $2;}'`.chomp
+  step('the exception "errorClass" equals "Fatal error"')
+  if version < '10.2'
+    step("the exception \"message\" contains \"#{message}\"")
+  end
+end
+
 Then("the event {string} is within {int} seconds of the current timestamp") do |field, threshold_secs|
   value = read_key_path(find_request(0)[:body], "events.0.#{field}")
   assert_not_nil(value, "Expected a timestamp")
