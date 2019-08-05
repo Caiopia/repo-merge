@@ -109,6 +109,14 @@ static BSG_KSCrash_IntrospectionRules *bsg_g_introspectionRules;
 
 #pragma mark Callbacks
 
+/** Check if a memory address points to a valid null terminated UTF-8 string.
+ *
+ * @param address The address to check.
+ *
+ * @return true if the address points to a string.
+ */
+bool bsg_kscrw_i_isValidString(const void *const address);
+
 void bsg_kscrw_i_addBooleanElement(const BSG_KSCrashReportWriter *const writer,
                                    const char *const key, const bool value) {
     bsg_ksjsonaddBooleanElement(bsg_getJsonContext(writer), key, value);
@@ -136,8 +144,10 @@ void bsg_kscrw_i_addUIntegerElement(const BSG_KSCrashReportWriter *const writer,
 void bsg_kscrw_i_addStringElement(const BSG_KSCrashReportWriter *const writer,
                                   const char *const key,
                                   const char *const value) {
+  if (bsg_kscrw_i_isValidString(key) && bsg_kscrw_i_isValidString(value)) {
     bsg_ksjsonaddStringElement(bsg_getJsonContext(writer), key, value,
                                BSG_KSJSON_SIZE_AUTOMATIC);
+  }
 }
 
 void bsg_kscrw_i_addTextFileElement(const BSG_KSCrashReportWriter *const writer,
@@ -307,12 +317,6 @@ int bsg_kscrw_i_addJSONData(const char *const data, const size_t length,
 #pragma mark - Utility -
 // ============================================================================
 
-/** Check if a memory address points to a valid null terminated UTF-8 string.
- *
- * @param address The address to check.
- *
- * @return true if the address points to a string.
- */
 bool bsg_kscrw_i_isValidString(const void *const address) {
     if ((void *)address == NULL) {
         return false;
@@ -1427,12 +1431,18 @@ void bsg_kscrw_i_writeReportInfo(const BSG_KSCrashReportWriter *const writer,
     {
         writer->addStringElement(writer, BSG_KSCrashField_Version,
                                  BSG_KSCRASH_REPORT_VERSION);
-        writer->addStringElement(writer, BSG_KSCrashField_ID, reportID);
-        writer->addStringElement(writer, BSG_KSCrashField_ProcessName,
-                                 processName);
+        if (bsg_kscrw_i_isValidString(reportID)) {
+          writer->addStringElement(writer, BSG_KSCrashField_ID, reportID);
+        }
+        if (bsg_kscrw_i_isValidString(processName)) {
+          writer->addStringElement(writer, BSG_KSCrashField_ProcessName,
+                                   processName);
+        }
         writer->addIntegerElement(writer, BSG_KSCrashField_Timestamp,
                                   time(NULL));
-        writer->addStringElement(writer, BSG_KSCrashField_Type, type);
+        if (bsg_kscrw_i_isValidString(type)) {
+          writer->addStringElement(writer, BSG_KSCrashField_Type, type);
+        }
     }
     writer->endContainer(writer);
 }
@@ -1590,7 +1600,8 @@ void bsg_kscrashreport_writeStandardReport(
 
         bsg_kscrw_i_writeProcessState(writer, BSG_KSCrashField_ProcessState);
 
-        if (crashContext->config.systemInfoJSON != NULL) {
+        if (crashContext->config.systemInfoJSON != NULL 
+            && bsg_kscrw_i_isValidString(crashContext->config.systemInfoJSON)) {
             bsg_kscrw_i_addJSONElement(writer, BSG_KSCrashField_System,
                                        crashContext->config.systemInfoJSON);
         }
@@ -1603,7 +1614,8 @@ void bsg_kscrashreport_writeStandardReport(
         }
         writer->endContainer(writer);
 
-        if (crashContext->config.userInfoJSON != NULL) {
+        if (crashContext->config.userInfoJSON != NULL
+            && bsg_kscrw_i_isValidString(crashContext->config.userInfoJSON)) {
             bsg_kscrw_i_addJSONElement(writer, BSG_KSCrashField_User,
                                        crashContext->config.userInfoJSON);
         }
