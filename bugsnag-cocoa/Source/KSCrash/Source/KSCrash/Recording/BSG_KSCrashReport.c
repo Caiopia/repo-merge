@@ -245,21 +245,8 @@ void bsg_kscrw_i_addUUIDElement(const BSG_KSCrashReportWriter *const writer,
 void bsg_kscrw_i_addJSONElement(const BSG_KSCrashReportWriter *const writer,
                                 const char *const key,
                                 const char *const jsonElement) {
-    int jsonResult = bsg_ksjsonaddJSONElement(bsg_getJsonContext(writer), key,
-                                              jsonElement, strlen(jsonElement));
-    if (jsonResult != BSG_KSJSON_OK) {
-        char errorBuff[100];
-        snprintf(errorBuff, sizeof(errorBuff), "Invalid JSON data: %s",
-                 bsg_ksjsonstringForError(jsonResult));
-        bsg_ksjsonbeginObject(bsg_getJsonContext(writer), key);
-        bsg_ksjsonaddStringElement(bsg_getJsonContext(writer),
-                                   BSG_KSCrashField_Error, errorBuff,
-                                   BSG_KSJSON_SIZE_AUTOMATIC);
-        bsg_ksjsonaddStringElement(bsg_getJsonContext(writer),
-                                   BSG_KSCrashField_JSONData, jsonElement,
-                                   BSG_KSJSON_SIZE_AUTOMATIC);
-        bsg_ksjsonendContainer(bsg_getJsonContext(writer));
-    }
+    bsg_ksjsonaddJSONElement(bsg_getJsonContext(writer), key, jsonElement,
+                             strlen(jsonElement));
 }
 
 void bsg_kscrw_i_addJSONElementFromFile(
