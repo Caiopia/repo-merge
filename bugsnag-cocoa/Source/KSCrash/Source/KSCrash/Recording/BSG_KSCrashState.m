@@ -53,7 +53,6 @@
     "backgroundDurationSinceLastCrash"
 #define BSG_kKeyLaunchesSinceLastCrash "launchesSinceLastCrash"
 #define BSG_kKeySessionsSinceLastCrash "sessionsSinceLastCrash"
-#define BSG_kKeySessionsSinceLaunch "sessionsSinceLaunch"
 
 // ============================================================================
 #pragma mark - Globals -
@@ -70,82 +69,6 @@ static BSG_KSCrash_State *bsg_g_state;
 // ============================================================================
 #pragma mark - JSON Encoding -
 // ============================================================================
-
-int bsg_kscrashstate_i_onBooleanElement(const char *const name,
-                                        const bool value,
-                                        void *const userData) {
-    BSG_KSCrash_State *state = userData;
-
-    if (strcmp(name, BSG_kKeyCrashedLastLaunch) == 0) {
-        state->crashedLastLaunch = value;
-    }
-
-    return BSG_KSJSON_OK;
-}
-
-int bsg_kscrashstate_i_onFloatingPointElement(const char *const name,
-                                              const double value,
-                                              void *const userData) {
-    BSG_KSCrash_State *state = userData;
-
-    if (strcmp(name, BSG_kKeyActiveDurationSinceLastCrash) == 0) {
-        state->activeDurationSinceLastCrash = value;
-    }
-    if (strcmp(name, BSG_kKeyBackgroundDurationSinceLastCrash) == 0) {
-        state->backgroundDurationSinceLastCrash = value;
-    }
-
-    return BSG_KSJSON_OK;
-}
-
-int bsg_kscrashstate_i_onIntegerElement(const char *const name,
-                                        const long long value,
-                                        void *const userData) {
-    BSG_KSCrash_State *state = userData;
-
-    if (strcmp(name, BSG_kKeyFormatVersion) == 0) {
-        if (value != BSG_kFormatVersion) {
-            BSG_KSLOG_ERROR(@"Expected version 1 but got %lld", value);
-            return BSG_KSJSON_ERROR_INVALID_DATA;
-        }
-    } else if (strcmp(name, BSG_kKeyLaunchesSinceLastCrash) == 0) {
-        state->launchesSinceLastCrash = (int)value;
-    } else if (strcmp(name, BSG_kKeySessionsSinceLastCrash) == 0) {
-        state->sessionsSinceLastCrash = (int)value;
-    }
-
-    // FP value might have been written as a whole number.
-    return bsg_kscrashstate_i_onFloatingPointElement(name, value, userData);
-}
-
-int bsg_kscrashstate_i_onNullElement(__unused const char *const name,
-                                     __unused void *const userData) {
-    return BSG_KSJSON_OK;
-}
-
-int bsg_kscrashstate_i_onStringElement(__unused const char *const name,
-                                       __unused const char *const value,
-                                       __unused void *const userData) {
-    return BSG_KSJSON_OK;
-}
-
-int bsg_kscrashstate_i_onBeginObject(__unused const char *const name,
-                                     __unused void *const userData) {
-    return BSG_KSJSON_OK;
-}
-
-int bsg_kscrashstate_i_onBeginArray(__unused const char *const name,
-                                    __unused void *const userData) {
-    return BSG_KSJSON_OK;
-}
-
-int bsg_kscrashstate_i_onEndContainer(__unused void *const userData) {
-    return BSG_KSJSON_OK;
-}
-
-int bsg_kscrashstate_i_onEndData(__unused void *const userData) {
-    return BSG_KSJSON_OK;
-}
 
 /** Callback for adding JSON data.
  */
