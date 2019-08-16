@@ -12,7 +12,9 @@ Scenario: Executing privileged instruction
     And the payload field "notifier.name" equals "iOS Bugsnag Notifier"
     And the payload field "events" is an array with 1 element
     And the exception "errorClass" equals "EXC_BAD_ACCESS"
-    And the "method" of stack frame 0 equals "-[PrivilegedInstructionScenario run]"
+    And the symbolicated stacktrace matches:
+        | -[PrivilegedInstructionScenario run] (in iOSTestApp) (PrivilegedInstructionScenario.m:43) |
+        | closure #1 in AppDelegate.triggerEvent(scenario:delay:mode:) (in iOSTestApp) (AppDelegate.swift:66) |
 
 Scenario: Calling __builtin_trap()
     When I crash the app using "BuiltinTrapScenario"
@@ -23,7 +25,9 @@ Scenario: Calling __builtin_trap()
     And the payload field "notifier.name" equals "iOS Bugsnag Notifier"
     And the payload field "events" is an array with 1 element
     And the exception "errorClass" equals "EXC_BAD_INSTRUCTION"
-    And the "method" of stack frame 0 equals "-[BuiltinTrapScenario run]"
+    And the symbolicated stacktrace matches:
+        | -[BuiltinTrapScenario run] (in iOSTestApp) (BuiltinTrapScenario.m:20) |
+        | closure #1 in AppDelegate.triggerEvent(scenario:delay:mode:) (in iOSTestApp) (AppDelegate.swift:66) |
 
 Scenario: Calling abort()
     When I crash the app using "AbortScenario"
@@ -34,9 +38,11 @@ Scenario: Calling abort()
     And the payload field "notifier.name" equals "iOS Bugsnag Notifier"
     And the payload field "events" is an array with 1 element
     And the exception "errorClass" equals "SIGABRT"
-    And the "method" of stack frame 0 equals "__pthread_kill"
-    And the "method" of stack frame 1 equals "abort"
-    And the "method" of stack frame 2 equals "-[AbortScenario run]"
+    And the symbolicated stacktrace matches:
+        | __pthread_kill (in libsystem_kernel.dylib) |
+        | abort (in libsystem_c.dylib) |
+        | -[AbortScenario run] (in iOSTestApp) (AbortScenario.m:37) |
+        | closure #1 in AppDelegate.triggerEvent(scenario:delay:mode:) (in iOSTestApp) (AppDelegate.swift:66) |
 
 Scenario: Throwing a C++ exception
     When I crash the app using "CxxExceptionScenario"
