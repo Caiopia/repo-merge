@@ -1,6 +1,11 @@
 Changelog
 =========
 
+## TBD
+
+This release adds support for including Bugsnag as a Swift package dependency in
+Xcode 11 and beyond.
+
 ## 5.22.5 (2019-08-14)
 
 ### Bug fixes
