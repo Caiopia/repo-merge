@@ -23,12 +23,10 @@
 // https://github.com/mrackwitz/xcconfigs
 
 
-SUPPORTED_PLATFORMS                    = macosx iphonesimulator iphoneos watchos watchsimulator appletvos appletvsimulator
+SUPPORTED_PLATFORMS                    = macosx iphonesimulator iphoneos appletvos appletvsimulator
 VALID_ARCHS[sdk=macosx*]               = i386 x86_64
 VALID_ARCHS[sdk=iphoneos*]             = arm64 armv7 armv7s
 VALID_ARCHS[sdk=iphonesimulator*]      = i386 x86_64
-VALID_ARCHS[sdk=watchos*]              = armv7k
-VALID_ARCHS[sdk=watchsimulator*]       = i386
 VALID_ARCHS[sdk=appletvos*]            = arm64
 VALID_ARCHS[sdk=appletvsimulator*]     = x86_64
 
@@ -36,8 +34,6 @@ VALID_ARCHS[sdk=appletvsimulator*]     = x86_64
 LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]           = $(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks'
 LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]         = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]  = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-LD_RUNPATH_SEARCH_PATHS[sdk=watchos*]          = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-LD_RUNPATH_SEARCH_PATHS[sdk=watchsimulator*]   = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 LD_RUNPATH_SEARCH_PATHS[sdk=appletvos*]        = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 LD_RUNPATH_SEARCH_PATHS[sdk=appletvsimulator*] = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 
@@ -61,13 +57,7 @@ TARGETED_DEVICE_FAMILY[sdk=iphone*]           = 1,2
 TARGETED_DEVICE_FAMILY[sdk=appletvsimulator*] = 3
 TARGETED_DEVICE_FAMILY[sdk=appletv*]          = 3
 
-// Watch-specific default settings
-TARGETED_DEVICE_FAMILY[sdk=watchsimulator*]   = 4
-TARGETED_DEVICE_FAMILY[sdk=watch*]            = 4
-
 ENABLE_BITCODE[sdk=macosx*]                   = NO
-ENABLE_BITCODE[sdk=watchsimulator*]           = YES
-ENABLE_BITCODE[sdk=watch*]                    = YES
 ENABLE_BITCODE[sdk=iphonesimulator*]          = YES
 ENABLE_BITCODE[sdk=iphone*]                   = YES
 ENABLE_BITCODE[sdk=appletvsimulator*]         = YES
