@@ -27,6 +27,15 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "340E737B1C5D819B0076B1F6"
+            BuildableName = "libAppAuth-iOS.a"
+            BlueprintName = "AppAuth-iOS"
+            ReferencedContainer = "container:AppAuth.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -38,18 +47,17 @@
                ReferencedContainer = "container:AppAuth.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "86C8F1302356601F0031DEA2"
+               BuildableName = "AppAuth-iOSSwiftTests.xctest"
+               BlueprintName = "AppAuth-iOSSwiftTests"
+               ReferencedContainer = "container:AppAuth.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "340E737B1C5D819B0076B1F6"
-            BuildableName = "libAppAuth-iOS.a"
-            BlueprintName = "AppAuth-iOS"
-            ReferencedContainer = "container:AppAuth.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -70,8 +78,6 @@
             ReferencedContainer = "container:AppAuth.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

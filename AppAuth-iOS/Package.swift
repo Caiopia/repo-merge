@@ -15,7 +15,8 @@ let package = Package(
   ],
   targets: [
     .target(name: "AppAuth-iOS", dependencies: [], path: "Source"),
-    .testTarget(name: "AppAuth-iOSTests", dependencies: ["AppAuth-iOS"], path: "UnitTests"),
+    .testTarget(name: "AppAuth-iOSTests", dependencies: ["AppAuth-iOS"], path: "UnitTests/Tests"),
+    .testTarget(name: "AppAuth-iOSSwiftTests", dependencies: ["AppAuth-iOS"], path: "UnitTests/SwiftTests"),
     .target(name: "AppAuth_iOS", dependencies: [], path: "Source"),
     .testTarget(name: "AppAuth_iOSTests", dependencies: ["AppAuth_iOS"], path: "UnitTests"),
   ]

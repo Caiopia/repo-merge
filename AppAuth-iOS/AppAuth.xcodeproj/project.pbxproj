@@ -452,7 +452,6 @@
 		34AF736C1FB4E4B40022335F /* OIDURLSessionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 039697451FA8258D003D1FB2 /* OIDURLSessionProvider.m */; };
 		34AF736D1FB4E4B40022335F /* OIDURLSessionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 039697451FA8258D003D1FB2 /* OIDURLSessionProvider.m */; };
 		34B822932153602C00D96702 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B822922153602C00D96702 /* AuthenticationServices.framework */; };
-		34D5EC451E6D1AD900814354 /* OIDSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5EC441E6D1AD900814354 /* OIDSwiftTests.swift */; };
 		34FEA6AE1DB6E083005C9212 /* OIDLoopbackHTTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 34FEA6AC1DB6E083005C9212 /* OIDLoopbackHTTPServer.h */; };
 		34FEA6AF1DB6E083005C9212 /* OIDLoopbackHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FEA6AD1DB6E083005C9212 /* OIDLoopbackHTTPServer.m */; };
 		55A094CF20DFBB10000045D1 /* OIDURLSessionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 039697441FA8258D003D1FB2 /* OIDURLSessionProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -464,6 +463,11 @@
 		60140F801DE4344200DA0DC3 /* OIDRegistrationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 60140F7F1DE4344200DA0DC3 /* OIDRegistrationResponse.m */; };
 		60140F831DE43BAF00DA0DC3 /* OIDRegistrationRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60140F821DE43BAF00DA0DC3 /* OIDRegistrationRequestTests.m */; };
 		60140F861DE43CC700DA0DC3 /* OIDRegistrationResponseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60140F851DE43CC700DA0DC3 /* OIDRegistrationResponseTests.m */; };
+		86C8F1342356601F0031DEA2 /* OIDSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D5EC441E6D1AD900814354 /* OIDSwiftTests.swift */; };
+		86C8F1482356601F0031DEA2 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B822922153602C00D96702 /* AuthenticationServices.framework */; };
+		86C8F1492356601F0031DEA2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417422C1C5D850C000EF209 /* Security.framework */; };
+		86C8F14A2356601F0031DEA2 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417422A1C5D8502000EF209 /* SafariServices.framework */; };
+		86C8F14B2356601F0031DEA2 /* libAppAuth-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 340E737C1C5D819B0076B1F6 /* libAppAuth-iOS.a */; };
 		A5EEF29720D821120044F470 /* OIDTokenUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EEF1FD20CF07760044F470 /* OIDTokenUtilitiesTests.m */; };
 		A5EEF29820D8211A0044F470 /* OIDTokenUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EEF1FD20CF07760044F470 /* OIDTokenUtilitiesTests.m */; };
 		A5EEF29920D8211B0044F470 /* OIDTokenUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EEF1FD20CF07760044F470 /* OIDTokenUtilitiesTests.m */; };
@@ -566,6 +570,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 343AAA531E83463400F9D36E;
 			remoteInfo = AppAuth_iOS;
+		};
+		86C8F1322356601F0031DEA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 340E73741C5D819B0076B1F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340E737B1C5D819B0076B1F6;
+			remoteInfo = "AppAuth-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -714,6 +725,8 @@
 		60140F821DE43BAF00DA0DC3 /* OIDRegistrationRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OIDRegistrationRequestTests.m; sourceTree = "<group>"; };
 		60140F841DE43C8C00DA0DC3 /* OIDRegistrationResponseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OIDRegistrationResponseTests.h; sourceTree = "<group>"; };
 		60140F851DE43CC700DA0DC3 /* OIDRegistrationResponseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OIDRegistrationResponseTests.m; sourceTree = "<group>"; };
+		86C8F1502356601F0031DEA2 /* AppAuth-iOSSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppAuth-iOSSwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C8F1512356601F0031DEA2 /* AppAuth-iOSTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "AppAuth-iOSTests copy-Info.plist"; path = "/Users/caiolima/src/github.com/AppAuth-iOS/AppAuth-iOSTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		86CA221E23565C170041CDEB /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		86CA221F23565C2E0041CDEB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A5EEF1FD20CF07760044F470 /* OIDTokenUtilitiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OIDTokenUtilitiesTests.m; sourceTree = "<group>"; };
@@ -857,6 +870,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86C8F1472356601F0031DEA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C8F1482356601F0031DEA2 /* AuthenticationServices.framework in Frameworks */,
+				86C8F1492356601F0031DEA2 /* Security.framework in Frameworks */,
+				86C8F14A2356601F0031DEA2 /* SafariServices.framework in Frameworks */,
+				86C8F14B2356601F0031DEA2 /* libAppAuth-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -885,6 +909,7 @@
 				341741FB1C5D82D3000EF209 /* UnitTests */,
 				341741AE1C5D8243000EF209 /* Source */,
 				340E737D1C5D819B0076B1F6 /* Products */,
+				86C8F1512356601F0031DEA2 /* AppAuth-iOSTests copy-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -909,6 +934,7 @@
 				343AAACA1E8348AA00F9D36E /* AppAuth_macOSTests.xctest */,
 				342F42C32177B1FC00574F24 /* AppAuthCore.framework */,
 				348970972177B3B000ABEED4 /* AppAuthCoreTests.xctest */,
+				86C8F1502356601F0031DEA2 /* AppAuth-iOSSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -984,38 +1010,8 @@
 			isa = PBXGroup;
 			children = (
 				341742231C5D8317000EF209 /* UnitTestsInfo.plist */,
-				341742001C5D82D3000EF209 /* OIDAuthorizationRequestTests.h */,
-				341742011C5D82D3000EF209 /* OIDAuthorizationRequestTests.m */,
-				341742021C5D82D3000EF209 /* OIDAuthorizationResponseTests.h */,
-				341742031C5D82D3000EF209 /* OIDAuthorizationResponseTests.m */,
-				341742041C5D82D3000EF209 /* OIDAuthStateTests.h */,
-				341742051C5D82D3000EF209 /* OIDAuthStateTests.m */,
-				60140F811DE43B4D00DA0DC3 /* OIDRegistrationRequestTests.h */,
-				341742061C5D82D3000EF209 /* OIDGrantTypesTests.m */,
-				341742071C5D82D3000EF209 /* OIDResponseTypesTests.m */,
-				A6CEB1172007E384009D492A /* OIDEndSessionRequestTests.h */,
-				A6CEB1182007E384009D492A /* OIDEndSessionRequestTests.m */,
-				341742081C5D82D3000EF209 /* OIDScopesTests.m */,
-				341742091C5D82D3000EF209 /* OIDServiceConfigurationTests.h */,
-				3417420A1C5D82D3000EF209 /* OIDServiceConfigurationTests.m */,
-				3417420B1C5D82D3000EF209 /* OIDServiceDiscoveryTests.h */,
-				3417420C1C5D82D3000EF209 /* OIDServiceDiscoveryTests.m */,
-				3417420D1C5D82D3000EF209 /* OIDTokenRequestTests.h */,
-				3417420E1C5D82D3000EF209 /* OIDTokenRequestTests.m */,
-				3417420F1C5D82D3000EF209 /* OIDTokenResponseTests.h */,
-				341742101C5D82D3000EF209 /* OIDTokenResponseTests.m */,
-				A5EEF1FD20CF07760044F470 /* OIDTokenUtilitiesTests.m */,
-				341742111C5D82D3000EF209 /* OIDURLQueryComponentTests.h */,
-				341742121C5D82D3000EF209 /* OIDURLQueryComponentTests.m */,
-				341742131C5D82D3000EF209 /* OIDURLQueryComponentTestsIOS7.m */,
-				60140F821DE43BAF00DA0DC3 /* OIDRegistrationRequestTests.m */,
-				60140F841DE43C8C00DA0DC3 /* OIDRegistrationResponseTests.h */,
-				60140F851DE43CC700DA0DC3 /* OIDRegistrationResponseTests.m */,
-				34A663911E886AED0060B664 /* OIDRPProfileCode.h */,
-				34A6638A1E8865090060B664 /* OIDRPProfileCode.m */,
-				34D5EC441E6D1AD900814354 /* OIDSwiftTests.swift */,
-				34D5EC431E6D1AD900814354 /* OIDAppAuthTests-Bridging-Header.h */,
-				0396974C1FA827AD003D1FB2 /* OIDURLSessionProviderTests.m */,
+				86C8F1532356619B0031DEA2 /* Tests */,
+				86C8F1522356615F0031DEA2 /* SwiftTests */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -1055,6 +1051,52 @@
 				34FEA6AD1DB6E083005C9212 /* OIDLoopbackHTTPServer.m */,
 			);
 			path = LoopbackHTTPServer;
+			sourceTree = "<group>";
+		};
+		86C8F1522356615F0031DEA2 /* SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				34D5EC431E6D1AD900814354 /* OIDAppAuthTests-Bridging-Header.h */,
+				34D5EC441E6D1AD900814354 /* OIDSwiftTests.swift */,
+			);
+			path = SwiftTests;
+			sourceTree = "<group>";
+		};
+		86C8F1532356619B0031DEA2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				341742001C5D82D3000EF209 /* OIDAuthorizationRequestTests.h */,
+				341742011C5D82D3000EF209 /* OIDAuthorizationRequestTests.m */,
+				341742021C5D82D3000EF209 /* OIDAuthorizationResponseTests.h */,
+				341742031C5D82D3000EF209 /* OIDAuthorizationResponseTests.m */,
+				341742041C5D82D3000EF209 /* OIDAuthStateTests.h */,
+				341742051C5D82D3000EF209 /* OIDAuthStateTests.m */,
+				60140F811DE43B4D00DA0DC3 /* OIDRegistrationRequestTests.h */,
+				341742061C5D82D3000EF209 /* OIDGrantTypesTests.m */,
+				341742071C5D82D3000EF209 /* OIDResponseTypesTests.m */,
+				A6CEB1172007E384009D492A /* OIDEndSessionRequestTests.h */,
+				A6CEB1182007E384009D492A /* OIDEndSessionRequestTests.m */,
+				341742081C5D82D3000EF209 /* OIDScopesTests.m */,
+				341742091C5D82D3000EF209 /* OIDServiceConfigurationTests.h */,
+				3417420A1C5D82D3000EF209 /* OIDServiceConfigurationTests.m */,
+				3417420B1C5D82D3000EF209 /* OIDServiceDiscoveryTests.h */,
+				3417420C1C5D82D3000EF209 /* OIDServiceDiscoveryTests.m */,
+				3417420D1C5D82D3000EF209 /* OIDTokenRequestTests.h */,
+				3417420E1C5D82D3000EF209 /* OIDTokenRequestTests.m */,
+				3417420F1C5D82D3000EF209 /* OIDTokenResponseTests.h */,
+				341742101C5D82D3000EF209 /* OIDTokenResponseTests.m */,
+				A5EEF1FD20CF07760044F470 /* OIDTokenUtilitiesTests.m */,
+				341742111C5D82D3000EF209 /* OIDURLQueryComponentTests.h */,
+				341742121C5D82D3000EF209 /* OIDURLQueryComponentTests.m */,
+				341742131C5D82D3000EF209 /* OIDURLQueryComponentTestsIOS7.m */,
+				60140F821DE43BAF00DA0DC3 /* OIDRegistrationRequestTests.m */,
+				60140F841DE43C8C00DA0DC3 /* OIDRegistrationResponseTests.h */,
+				60140F851DE43CC700DA0DC3 /* OIDRegistrationResponseTests.m */,
+				34A663911E886AED0060B664 /* OIDRPProfileCode.h */,
+				34A6638A1E8865090060B664 /* OIDRPProfileCode.m */,
+				0396974C1FA827AD003D1FB2 /* OIDURLSessionProviderTests.m */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		F6F60FAF1D2BFEF000325CB3 /* iOS */ = {
@@ -1550,6 +1592,24 @@
 			productReference = 348970972177B3B000ABEED4 /* AppAuthCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		86C8F1302356601F0031DEA2 /* AppAuth-iOSSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86C8F14D2356601F0031DEA2 /* Build configuration list for PBXNativeTarget "AppAuth-iOSSwiftTests" */;
+			buildPhases = (
+				86C8F1332356601F0031DEA2 /* Sources */,
+				86C8F1472356601F0031DEA2 /* Frameworks */,
+				86C8F14C2356601F0031DEA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86C8F1312356601F0031DEA2 /* PBXTargetDependency */,
+			);
+			name = "AppAuth-iOSSwiftTests";
+			productName = "AppAuth-iOSTests";
+			productReference = 86C8F1502356601F0031DEA2 /* AppAuth-iOSSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1630,6 +1690,7 @@
 			targets = (
 				340E737B1C5D819B0076B1F6 /* AppAuth-iOS */,
 				341741EF1C5D8283000EF209 /* AppAuth-iOSTests */,
+				86C8F1302356601F0031DEA2 /* AppAuth-iOSSwiftTests */,
 				340DAE4D1D58216A00EC285B /* AppAuth-macOS */,
 				341AA4CD1E7F392C00FCA5C6 /* AppAuth-macOSTests */,
 				341E707D1DE18744004353C1 /* AppAuth-tvOS */,
@@ -1733,6 +1794,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86C8F14C2356601F0031DEA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1811,7 +1879,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34D5EC451E6D1AD900814354 /* OIDSwiftTests.swift in Sources */,
 				341742211C5D82D3000EF209 /* OIDURLQueryComponentTests.m in Sources */,
 				341742201C5D82D3000EF209 /* OIDTokenResponseTests.m in Sources */,
 				341742221C5D82D3000EF209 /* OIDURLQueryComponentTestsIOS7.m in Sources */,
@@ -2200,6 +2267,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86C8F1332356601F0031DEA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C8F1342356601F0031DEA2 /* OIDSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2237,6 +2312,11 @@
 			isa = PBXTargetDependency;
 			target = 343AAA531E83463400F9D36E /* AppAuth_iOS */;
 			targetProxy = 3489707F2177B3B000ABEED4 /* PBXContainerItemProxy */;
+		};
+		86C8F1312356601F0031DEA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340E737B1C5D819B0076B1F6 /* AppAuth-iOS */;
+			targetProxy = 86C8F1322356601F0031DEA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2317,7 +2397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2373,7 +2453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -2916,6 +2996,39 @@
 			};
 			name = Release;
 		};
+		86C8F14E2356601F0031DEA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/";
+				INFOPLIST_FILE = "AppAuth-iOSTests copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.openid.appauth.AppAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/SwiftTests/OIDAppAuthTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		86C8F14F2356601F0031DEA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/";
+				INFOPLIST_FILE = "AppAuth-iOSTests copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.openid.appauth.AppAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UnitTests/SwiftTests/OIDAppAuthTests-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3068,6 +3181,15 @@
 			buildConfigurations = (
 				348970952177B3B000ABEED4 /* Debug */,
 				348970962177B3B000ABEED4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86C8F14D2356601F0031DEA2 /* Build configuration list for PBXNativeTarget "AppAuth-iOSSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86C8F14E2356601F0031DEA2 /* Debug */,
+				86C8F14F2356601F0031DEA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
