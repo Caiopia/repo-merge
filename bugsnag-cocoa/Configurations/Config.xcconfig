@@ -78,3 +78,8 @@ ENABLE_BITCODE[sdk=appletv*]                  = YES
 // by `xcodebuild -showBuildSettings` are wrong when building the macOS variant
 // of a universal framework. (FB7365403)
 EFFECTIVE_PLATFORM_NAME =
+
+// Set OS macros for the static lib target
+OTHER_CFLAGS[sdk=macosx*] = $(inherited) -DTARGET_OS_MAC
+OTHER_CFLAGS[sdk=iphoneos*] = $(inherited) -DTARGET_OS_IPHONE
+OTHER_CFLAGS[sdk=iphonesimulator*] = $(inherited) -DTARGET_OS_IPHONE
