@@ -9,7 +9,17 @@ Version 6 introduces a number of property and method renames:
 ### `BugsnagConfiguration` class
 
 ```diff
-  let config = BugsnagConfiguration("YOUR API KEY HERE")
+ObjC: 
+
+  NSError *error;
+  BugsnagConfiguration *config = [[BugsnagConfiguration alloc] initWithApiKey:"YOUR API KEY HERE" error:error];
+
+Swift:
+
+  let config = try BugsnagConfiguration("YOUR API KEY HERE")
+
++ BSGConfigurationErrorDomain
++ BSGConfigurationErrorCode
 
 + config.setMaxBreadcrumbs()
 
