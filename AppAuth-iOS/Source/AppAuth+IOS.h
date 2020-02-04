@@ -16,11 +16,11 @@
         limitations under the License.
  */
 
-#import "OIDAuthState+IOS.h"
-#import "OIDAuthorizationService+IOS.h"
-#import "OIDExternalUserAgentIOS.h"
-#import "OIDExternalUserAgentIOSCustomBrowser.h"
-#import "OIDExternalUserAgentCatalyst.h"
+#import "iOS/OIDAuthState+IOS.h"
+#import "iOS/OIDAuthorizationService+IOS.h"
+#import "iOS/OIDExternalUserAgentIOS.h"
+#import "iOS/OIDExternalUserAgentIOSCustomBrowser.h"
+#import "iOS/OIDExternalUserAgentCatalyst.h"
 
 /*! @mainpage AppAuth for iOS and macOS
 
