@@ -44,7 +44,8 @@ let package = Package(
             sources: ["Source/iOS"],
             publicHeadersPath: "Source",
             cSettings: [
-                .headerSearchPath("Source")
+                .headerSearchPath("Source"),
+                .headerSearchPath("Source/iOS")
             ]
         )
     ]
