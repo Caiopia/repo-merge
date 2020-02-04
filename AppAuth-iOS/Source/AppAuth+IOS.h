@@ -16,45 +16,11 @@
         limitations under the License.
  */
 
-#import "OIDAuthState.h"
-#import "OIDAuthStateChangeDelegate.h"
-#import "OIDAuthStateErrorDelegate.h"
-#import "OIDAuthorizationRequest.h"
-#import "OIDAuthorizationResponse.h"
-#import "OIDAuthorizationService.h"
-#import "OIDError.h"
-#import "OIDErrorUtilities.h"
-#import "OIDExternalUserAgent.h"
-#import "OIDExternalUserAgentRequest.h"
-#import "OIDExternalUserAgentSession.h"
-#import "OIDGrantTypes.h"
-#import "OIDIDToken.h"
-#import "OIDRegistrationRequest.h"
-#import "OIDRegistrationResponse.h"
-#import "OIDResponseTypes.h"
-#import "OIDScopes.h"
-#import "OIDScopeUtilities.h"
-#import "OIDServiceConfiguration.h"
-#import "OIDServiceDiscovery.h"
-#import "OIDTokenRequest.h"
-#import "OIDTokenResponse.h"
-#import "OIDTokenUtilities.h"
-#import "OIDURLSessionProvider.h"
-#import "OIDEndSessionRequest.h"
-#import "OIDEndSessionResponse.h"
-
-#if TARGET_OS_TV
-#elif TARGET_OS_WATCH
-#elif TARGET_OS_IOS || TARGET_OS_MACCATALYST
-#import "AppAuth+IOS.h"
-#elif TARGET_OS_MAC
-#import "OIDAuthState+Mac.h"
-#import "OIDAuthorizationService+Mac.h"
-#import "OIDExternalUserAgentMac.h"
-#import "OIDRedirectHTTPHandler.h"
-#else
-#error "Platform Undefined"
-#endif
+#import "OIDAuthState+IOS.h"
+#import "OIDAuthorizationService+IOS.h"
+#import "OIDExternalUserAgentIOS.h"
+#import "OIDExternalUserAgentIOSCustomBrowser.h"
+#import "OIDExternalUserAgentCatalyst.h"
 
 /*! @mainpage AppAuth for iOS and macOS
 
