@@ -20,11 +20,11 @@
 
 #import "OIDAuthorizationResponseTests.h"
 #import "OIDServiceConfigurationTests.h"
-#import "Source/OIDAuthorizationRequest.h"
-#import "Source/OIDAuthorizationResponse.h"
-#import "Source/OIDScopeUtilities.h"
-#import "Source/OIDServiceConfiguration.h"
-#import "Source/OIDTokenRequest.h"
+#import "OIDAuthorizationRequest.h"
+#import "OIDAuthorizationResponse.h"
+#import "OIDScopeUtilities.h"
+#import "OIDServiceConfiguration.h"
+#import "OIDTokenRequest.h"
 
 // Ignore warnings about "Use of GNU statement expression extension" which is raised by our use of
 // the XCTAssert___ macros.

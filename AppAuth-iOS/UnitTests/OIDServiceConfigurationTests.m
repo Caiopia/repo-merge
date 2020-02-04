@@ -21,10 +21,10 @@
 #import <objc/runtime.h>
 
 #import "OIDServiceDiscoveryTests.h"
-#import "Source/OIDAuthorizationService.h"
-#import "Source/OIDError.h"
-#import "Source/OIDServiceConfiguration.h"
-#import "Source/OIDServiceDiscovery.h"
+#import "OIDAuthorizationService.h"
+#import "OIDError.h"
+#import "OIDServiceConfiguration.h"
+#import "OIDServiceDiscovery.h"
 
 // Ignore warnings about "Use of GNU statement expression extension" which is raised by our use of
 // the XCTAssert___ macros.

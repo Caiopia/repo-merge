@@ -21,11 +21,11 @@
 #import "OIDAuthorizationResponseTests.h"
 #import "OIDRegistrationResponseTests.h"
 #import "OIDTokenResponseTests.h"
-#import "Source/OIDAuthState.h"
-#import "Source/OIDAuthorizationResponse.h"
-#import "Source/OIDErrorUtilities.h"
-#import "Source/OIDRegistrationResponse.h"
-#import "Source/OIDTokenResponse.h"
+#import "OIDAuthState.h"
+#import "OIDAuthorizationResponse.h"
+#import "OIDErrorUtilities.h"
+#import "OIDRegistrationResponse.h"
+#import "OIDTokenResponse.h"
 #import "OIDTokenRequestTests.h"
 
 // Ignore warnings about "Use of GNU statement expression extension" which is raised by our use of
