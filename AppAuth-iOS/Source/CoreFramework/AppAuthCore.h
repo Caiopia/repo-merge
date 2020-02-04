@@ -24,7 +24,7 @@ FOUNDATION_EXPORT double AppAuthCoreVersionNumber;
 //! Project version string for AppAuthCoreFramework.
 FOUNDATION_EXPORT const unsigned char AppAuthCoreVersionString[];
 
-#import <AppAuthCore/OIDAuthState.h>
+#import <Core/OIDAuthState.h>
 #import <AppAuthCore/OIDAuthStateChangeDelegate.h>
 #import <AppAuthCore/OIDAuthStateErrorDelegate.h>
 #import <AppAuthCore/OIDAuthorizationRequest.h>
