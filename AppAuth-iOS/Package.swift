@@ -41,7 +41,11 @@ let package = Package(
             name: "AppAuth",
             dependencies: ["Core"],
             path: ".",
-            sources: ["Source/iOS"]
+            sources: ["Source/iOS"],
+            publicHeadersPath: "Source",
+            cSettings: [
+                .headerSearchPath("Source")
+            ]
         )
     ]
 )
