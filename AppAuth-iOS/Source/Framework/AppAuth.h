@@ -55,15 +55,15 @@ FOUNDATION_EXPORT const unsigned char AppAuthVersionString[];
 #elif TARGET_OS_WATCH
 #elif TARGET_OS_IOS || TARGET_OS_MACCATALYST
 #import "iOS/OIDAuthState+IOS.h"
-#import <AppAuth/OIDAuthorizationService+IOS.h>
-#import <AppAuth/OIDExternalUserAgentIOS.h>
-#import <AppAuth/OIDExternalUserAgentIOSCustomBrowser.h>
-#import "AppAuth/OIDExternalUserAgentCatalyst.h"
+#import "iOS/OIDAuthorizationService+IOS.h"
+#import "iOS/OIDExternalUserAgentIOS.h"
+#import "iOS/OIDExternalUserAgentIOSCustomBrowser.h"
+#import "iOS/OIDExternalUserAgentCatalyst.h"
 #elif TARGET_OS_MAC
-#import <AppAuth/OIDAuthState+Mac.h>
-#import <AppAuth/OIDAuthorizationService+Mac.h>
-#import <AppAuth/OIDExternalUserAgentMac.h>
-#import <AppAuth/OIDRedirectHTTPHandler.h>
+#import "macOS/OIDAuthState+Mac.h"
+#import "macOS/OIDAuthorizationService+Mac.h"
+#import "macOS/OIDExternalUserAgentMac.h"
+#import "macOS/OIDRedirectHTTPHandler.h"
 #else
 #error "Platform Undefined"
 #endif
