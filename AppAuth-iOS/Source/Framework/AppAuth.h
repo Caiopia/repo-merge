@@ -24,47 +24,47 @@ FOUNDATION_EXPORT double AppAuthVersionNumber;
 //! Project version string for AppAuthFramework-iOS.
 FOUNDATION_EXPORT const unsigned char AppAuthVersionString[];
 
-//#import <AppAuth/OIDAuthState.h>
-//#import <AppAuth/OIDAuthStateChangeDelegate.h>
-//#import <AppAuth/OIDAuthStateErrorDelegate.h>
-//#import <AppAuth/OIDAuthorizationRequest.h>
-//#import <AppAuth/OIDAuthorizationResponse.h>
-//#import <AppAuth/OIDAuthorizationService.h>
-//#import <AppAuth/OIDError.h>
-//#import <AppAuth/OIDErrorUtilities.h>
-//#import <AppAuth/OIDExternalUserAgent.h>
-//#import <AppAuth/OIDExternalUserAgentRequest.h>
-//#import <AppAuth/OIDExternalUserAgentSession.h>
-//#import <AppAuth/OIDGrantTypes.h>
-//#import <AppAuth/OIDIDToken.h>
-//#import <AppAuth/OIDRegistrationRequest.h>
-//#import <AppAuth/OIDRegistrationResponse.h>
-//#import <AppAuth/OIDResponseTypes.h>
-//#import <AppAuth/OIDScopes.h>
-//#import <AppAuth/OIDScopeUtilities.h>
-//#import <AppAuth/OIDServiceConfiguration.h>
-//#import <AppAuth/OIDServiceDiscovery.h>
-//#import <AppAuth/OIDTokenRequest.h>
-//#import <AppAuth/OIDTokenResponse.h>
-//#import <AppAuth/OIDTokenUtilities.h>
-//#import <AppAuth/OIDURLSessionProvider.h>
-//#import <AppAuth/OIDEndSessionRequest.h>
-//#import <AppAuth/OIDEndSessionResponse.h>
-//
-//#if TARGET_OS_TV
-//#elif TARGET_OS_WATCH
-//#elif TARGET_OS_IOS || TARGET_OS_MACCATALYST
-//#import <AppAuth/OIDAuthState+IOS.h>
-//#import <AppAuth/OIDAuthorizationService+IOS.h>
-//#import <AppAuth/OIDExternalUserAgentIOS.h>
-//#import <AppAuth/OIDExternalUserAgentIOSCustomBrowser.h>
-//#import "AppAuth/OIDExternalUserAgentCatalyst.h"
-//#elif TARGET_OS_MAC
-//#import <AppAuth/OIDAuthState+Mac.h>
-//#import <AppAuth/OIDAuthorizationService+Mac.h>
-//#import <AppAuth/OIDExternalUserAgentMac.h>
-//#import <AppAuth/OIDRedirectHTTPHandler.h>
-//#else
-//#error "Platform Undefined"
-//#endif
+#import <AppAuth/OIDAuthState.h>
+#import <AppAuth/OIDAuthStateChangeDelegate.h>
+#import <AppAuth/OIDAuthStateErrorDelegate.h>
+#import <AppAuth/OIDAuthorizationRequest.h>
+#import <AppAuth/OIDAuthorizationResponse.h>
+#import <AppAuth/OIDAuthorizationService.h>
+#import <AppAuth/OIDError.h>
+#import <AppAuth/OIDErrorUtilities.h>
+#import <AppAuth/OIDExternalUserAgent.h>
+#import <AppAuth/OIDExternalUserAgentRequest.h>
+#import <AppAuth/OIDExternalUserAgentSession.h>
+#import <AppAuth/OIDGrantTypes.h>
+#import <AppAuth/OIDIDToken.h>
+#import <AppAuth/OIDRegistrationRequest.h>
+#import <AppAuth/OIDRegistrationResponse.h>
+#import <AppAuth/OIDResponseTypes.h>
+#import <AppAuth/OIDScopes.h>
+#import <AppAuth/OIDScopeUtilities.h>
+#import <AppAuth/OIDServiceConfiguration.h>
+#import <AppAuth/OIDServiceDiscovery.h>
+#import <AppAuth/OIDTokenRequest.h>
+#import <AppAuth/OIDTokenResponse.h>
+#import <AppAuth/OIDTokenUtilities.h>
+#import <AppAuth/OIDURLSessionProvider.h>
+#import <AppAuth/OIDEndSessionRequest.h>
+#import <AppAuth/OIDEndSessionResponse.h>
+
+#if TARGET_OS_TV
+#elif TARGET_OS_WATCH
+#elif TARGET_OS_IOS || TARGET_OS_MACCATALYST
+#import <AppAuth/OIDAuthState+IOS.h>
+#import <AppAuth/OIDAuthorizationService+IOS.h>
+#import <AppAuth/OIDExternalUserAgentIOS.h>
+#import <AppAuth/OIDExternalUserAgentIOSCustomBrowser.h>
+#import "AppAuth/OIDExternalUserAgentCatalyst.h"
+#elif TARGET_OS_MAC
+#import <AppAuth/OIDAuthState+Mac.h>
+#import <AppAuth/OIDAuthorizationService+Mac.h>
+#import <AppAuth/OIDExternalUserAgentMac.h>
+#import <AppAuth/OIDRedirectHTTPHandler.h>
+#else
+#error "Platform Undefined"
+#endif
 

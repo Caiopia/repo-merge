@@ -45,6 +45,7 @@ let package = Package(
             publicHeadersPath: "Source",
             cSettings: [
                 .headerSearchPath("Source"),
+                .headerSearchPath("Source/Core"),
             ]
         )
     ]
