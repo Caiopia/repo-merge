@@ -1,0 +1,5 @@
+platform :tvos, '9.2'
+
+target 'swift-tvos' do
+  pod 'Bugsnag', :path => "../.."
+end

@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44C198BC6BF26EBD49FBBE41 /* libPods-swift-tvos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA0A78BC48476FB064979 /* libPods-swift-tvos.a */; };
+		AAE4550D24941C2D0051D7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4550C24941C2D0051D7CD /* AppDelegate.swift */; };
+		AAE4550F24941C2D0051D7CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4550E24941C2D0051D7CD /* ViewController.swift */; };
+		AAE4551224941C2D0051D7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE4551024941C2D0051D7CD /* Main.storyboard */; };
+		AAE4551424941C2E0051D7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE4551324941C2E0051D7CD /* Assets.xcassets */; };
+		AAE4551724941C2E0051D7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE4551524941C2E0051D7CD /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		197C65463F57C2DD392D552A /* Pods-swift-tvos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-tvos.release.xcconfig"; path = "Target Support Files/Pods-swift-tvos/Pods-swift-tvos.release.xcconfig"; sourceTree = "<group>"; };
+		A78597B8FF722EEBC02AE5B4 /* Pods-swift-tvos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-tvos.debug.xcconfig"; path = "Target Support Files/Pods-swift-tvos/Pods-swift-tvos.debug.xcconfig"; sourceTree = "<group>"; };
+		AAE4550924941C2D0051D7CD /* swift-tvos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-tvos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE4550C24941C2D0051D7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAE4550E24941C2D0051D7CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAE4551124941C2D0051D7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAE4551324941C2E0051D7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAE4551624941C2E0051D7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAE4551824941C2E0051D7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9ABA0A78BC48476FB064979 /* libPods-swift-tvos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-swift-tvos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAE4550624941C2D0051D7CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C198BC6BF26EBD49FBBE41 /* libPods-swift-tvos.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		930D53D8768C4B689498B4F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A78597B8FF722EEBC02AE5B4 /* Pods-swift-tvos.debug.xcconfig */,
+				197C65463F57C2DD392D552A /* Pods-swift-tvos.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A59ADDB06B38FBB2C83111D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABA0A78BC48476FB064979 /* libPods-swift-tvos.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAE4550024941C2D0051D7CD = {
+			isa = PBXGroup;
+			children = (
+				AAE4550B24941C2D0051D7CD /* swift-tvos */,
+				AAE4550A24941C2D0051D7CD /* Products */,
+				930D53D8768C4B689498B4F1 /* Pods */,
+				A59ADDB06B38FBB2C83111D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AAE4550A24941C2D0051D7CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAE4550924941C2D0051D7CD /* swift-tvos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAE4550B24941C2D0051D7CD /* swift-tvos */ = {
+			isa = PBXGroup;
+			children = (
+				AAE4550C24941C2D0051D7CD /* AppDelegate.swift */,
+				AAE4550E24941C2D0051D7CD /* ViewController.swift */,
+				AAE4551024941C2D0051D7CD /* Main.storyboard */,
+				AAE4551324941C2E0051D7CD /* Assets.xcassets */,
+				AAE4551524941C2E0051D7CD /* LaunchScreen.storyboard */,
+				AAE4551824941C2E0051D7CD /* Info.plist */,
+			);
+			path = "swift-tvos";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAE4550824941C2D0051D7CD /* swift-tvos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAE4551B24941C2E0051D7CD /* Build configuration list for PBXNativeTarget "swift-tvos" */;
+			buildPhases = (
+				C6CB7248E48D2CE6A95D81A3 /* [CP] Check Pods Manifest.lock */,
+				AAE4550524941C2D0051D7CD /* Sources */,
+				AAE4550624941C2D0051D7CD /* Frameworks */,
+				AAE4550724941C2D0051D7CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swift-tvos";
+			productName = "swift-tvos";
+			productReference = AAE4550924941C2D0051D7CD /* swift-tvos.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAE4550124941C2D0051D7CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Bugsnag;
+				TargetAttributes = {
+					AAE4550824941C2D0051D7CD = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = AAE4550424941C2D0051D7CD /* Build configuration list for PBXProject "swift-tvos" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAE4550024941C2D0051D7CD;
+			productRefGroup = AAE4550A24941C2D0051D7CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAE4550824941C2D0051D7CD /* swift-tvos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAE4550724941C2D0051D7CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE4551724941C2E0051D7CD /* LaunchScreen.storyboard in Resources */,
+				AAE4551424941C2E0051D7CD /* Assets.xcassets in Resources */,
+				AAE4551224941C2D0051D7CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C6CB7248E48D2CE6A95D81A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swift-tvos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAE4550524941C2D0051D7CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE4550F24941C2D0051D7CD /* ViewController.swift in Sources */,
+				AAE4550D24941C2D0051D7CD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AAE4551024941C2D0051D7CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAE4551124941C2D0051D7CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AAE4551524941C2E0051D7CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAE4551624941C2E0051D7CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAE4551924941C2E0051D7CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+			};
+			name = Debug;
+		};
+		AAE4551A24941C2E0051D7CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 13.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAE4551C24941C2E0051D7CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A78597B8FF722EEBC02AE5B4 /* Pods-swift-tvos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 372ZUL2ZB7;
+				INFOPLIST_FILE = "swift-tvos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "bugsnag.swift-tvos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		AAE4551D24941C2E0051D7CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 197C65463F57C2DD392D552A /* Pods-swift-tvos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 372ZUL2ZB7;
+				INFOPLIST_FILE = "swift-tvos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "bugsnag.swift-tvos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAE4550424941C2D0051D7CD /* Build configuration list for PBXProject "swift-tvos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE4551924941C2E0051D7CD /* Debug */,
+				AAE4551A24941C2E0051D7CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAE4551B24941C2E0051D7CD /* Build configuration list for PBXNativeTarget "swift-tvos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE4551C24941C2E0051D7CD /* Debug */,
+				AAE4551D24941C2E0051D7CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAE4550124941C2D0051D7CD /* Project object */;
+}
