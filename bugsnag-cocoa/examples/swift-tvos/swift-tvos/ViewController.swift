@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
     @IBAction func notify(_ sender: Any) {
         do {
             try FileManager.default.removeItem(atPath:"//invalid/file")
@@ -25,6 +24,16 @@ class ViewController: UIViewController {
                 event.severity = .info
                 return true
             }
+        }
+    }
+
+    @IBAction func uncaughtException(_ sender: Any) {
+        let someJson : Dictionary = ["foo":self]
+        do {
+            let data = try JSONSerialization.data(withJSONObject: someJson, options: .prettyPrinted)
+            print("Received data: %@", data)
+        } catch {
+            // Why does this crash the app? A very good question.
         }
     }
 }
