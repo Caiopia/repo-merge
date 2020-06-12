@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
         return true
     }
@@ -24,6 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
+    @IBAction func notify(_ sender: Any) {
+        do {
+            try FileManager.default.removeItem(atPath:"//invalid/file")
+        } catch {
+            Bugsnag.notifyError(error) { event in
+                // modify report properties in the (optional) block
+                event.severity = .info
+                return true
+            }
+        }
+    }
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     }

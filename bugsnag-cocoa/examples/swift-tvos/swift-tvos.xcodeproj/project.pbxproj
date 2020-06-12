@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44C198BC6BF26EBD49FBBE41 /* libPods-swift-tvos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABA0A78BC48476FB064979 /* libPods-swift-tvos.a */; };
+		AA026FBA2494214200550C2F /* AnObjCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AA026FB92494214200550C2F /* AnObjCClass.m */; };
 		AAE4550D24941C2D0051D7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4550C24941C2D0051D7CD /* AppDelegate.swift */; };
 		AAE4550F24941C2D0051D7CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4550E24941C2D0051D7CD /* ViewController.swift */; };
 		AAE4551224941C2D0051D7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE4551024941C2D0051D7CD /* Main.storyboard */; };
@@ -18,6 +19,9 @@
 /* Begin PBXFileReference section */
 		197C65463F57C2DD392D552A /* Pods-swift-tvos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-tvos.release.xcconfig"; path = "Target Support Files/Pods-swift-tvos/Pods-swift-tvos.release.xcconfig"; sourceTree = "<group>"; };
 		A78597B8FF722EEBC02AE5B4 /* Pods-swift-tvos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-tvos.debug.xcconfig"; path = "Target Support Files/Pods-swift-tvos/Pods-swift-tvos.debug.xcconfig"; sourceTree = "<group>"; };
+		AA026FB72494214200550C2F /* swift-tvos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-tvos-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA026FB82494214200550C2F /* AnObjCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnObjCClass.h; sourceTree = "<group>"; };
+		AA026FB92494214200550C2F /* AnObjCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnObjCClass.m; sourceTree = "<group>"; };
 		AAE4550924941C2D0051D7CD /* swift-tvos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-tvos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE4550C24941C2D0051D7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAE4550E24941C2D0051D7CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +50,6 @@
 				A78597B8FF722EEBC02AE5B4 /* Pods-swift-tvos.debug.xcconfig */,
 				197C65463F57C2DD392D552A /* Pods-swift-tvos.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,12 +82,15 @@
 		AAE4550B24941C2D0051D7CD /* swift-tvos */ = {
 			isa = PBXGroup;
 			children = (
+				AA026FB82494214200550C2F /* AnObjCClass.h */,
+				AA026FB92494214200550C2F /* AnObjCClass.m */,
 				AAE4550C24941C2D0051D7CD /* AppDelegate.swift */,
 				AAE4550E24941C2D0051D7CD /* ViewController.swift */,
 				AAE4551024941C2D0051D7CD /* Main.storyboard */,
 				AAE4551324941C2E0051D7CD /* Assets.xcassets */,
 				AAE4551524941C2E0051D7CD /* LaunchScreen.storyboard */,
 				AAE4551824941C2E0051D7CD /* Info.plist */,
+				AA026FB72494214200550C2F /* swift-tvos-Bridging-Header.h */,
 			);
 			path = "swift-tvos";
 			sourceTree = "<group>";
@@ -122,6 +128,7 @@
 				TargetAttributes = {
 					AAE4550824941C2D0051D7CD = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -187,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE4550F24941C2D0051D7CD /* ViewController.swift in Sources */,
+				AA026FBA2494214200550C2F /* AnObjCClass.m in Sources */,
 				AAE4550D24941C2D0051D7CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +340,7 @@
 			baseConfigurationReference = A78597B8FF722EEBC02AE5B4 /* Pods-swift-tvos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 372ZUL2ZB7;
 				INFOPLIST_FILE = "swift-tvos/Info.plist";
@@ -341,6 +350,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bugsnag.swift-tvos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift-tvos/swift-tvos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
@@ -351,6 +362,7 @@
 			baseConfigurationReference = 197C65463F57C2DD392D552A /* Pods-swift-tvos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 372ZUL2ZB7;
 				INFOPLIST_FILE = "swift-tvos/Info.plist";
@@ -360,6 +372,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "bugsnag.swift-tvos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift-tvos/swift-tvos-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
