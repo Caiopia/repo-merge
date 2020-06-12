@@ -39,7 +39,8 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Basic notify"/>
                                 <connections>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="oZ8-La-Rv6"/>
+                                    <action selector="notify:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="UYf-5a-5Ra"/>
+                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="ZOT-at-DOI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i2-tN-Vab">

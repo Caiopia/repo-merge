@@ -16,5 +16,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func notify(_ sender: Any) {
+        do {
+            try FileManager.default.removeItem(atPath:"//invalid/file")
+        } catch {
+            Bugsnag.notifyError(error) { event in
+                // modify report properties in the (optional) block
+                event.severity = .info
+                return true
+            }
+        }
+    }
 }
 
