@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func notify(_ sender: Any) {
+    @IBAction func notifyException(_ sender: Any) {
         do {
             try FileManager.default.removeItem(atPath:"//invalid/file")
         } catch {
@@ -27,6 +27,10 @@ class ViewController: UIViewController {
         }
     }
 
+    @IBAction func notifyError(_ sender: Any) {
+        Bugsnag.notifyError(NSError(domain: "com.bugsnag.example", code: 101, userInfo: [NSLocalizedDescriptionKey: "A handled error"]))
+    }
+    
     @IBAction func uncaughtException(_ sender: Any) {
         let someJson : Dictionary = ["foo":self]
         do {

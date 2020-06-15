@@ -37,10 +37,10 @@
                                 <rect key="frame" x="111" y="130" width="356" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Basic notify"/>
+                                <state key="normal" title="Notify exception"/>
                                 <connections>
-                                    <action selector="notify:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="UYf-5a-5Ra"/>
                                     <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="ZOT-at-DOI"/>
+                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="UYf-5a-5Ra"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i2-tN-Vab">
@@ -50,6 +50,15 @@
                                 <state key="normal" title="Uncaught exception"/>
                                 <connections>
                                     <action selector="uncaughtException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="7Fp-aG-Yr3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6z-5U-uWR">
+                                <rect key="frame" x="111" y="240" width="356" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Notify error"/>
+                                <connections>
+                                    <action selector="notifyError:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="FKD-uo-Ni1"/>
                                 </connections>
                             </button>
                         </subviews>
