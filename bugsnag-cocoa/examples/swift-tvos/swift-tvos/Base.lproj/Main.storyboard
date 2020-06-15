@@ -61,6 +61,15 @@
                                     <action selector="notifyError:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="FKD-uo-Ni1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdM-4C-3aA">
+                                <rect key="frame" x="517" y="240" width="418" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Stack overflow"/>
+                                <connections>
+                                    <action selector="stackOverflow:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="WBM-tD-Qar"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
