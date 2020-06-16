@@ -75,6 +75,12 @@ class ViewController: UIViewController {
 
     }
     
+    /**
+     This method causes a signal from the operating system to terminate the app.  Upon reopening the app this signal should be notified to your Bugsnag dashboard.
+     */
+    @IBAction func signal(_ sender: Any) {
+        AnObjCClass().trap()
+    }
     
 }
 

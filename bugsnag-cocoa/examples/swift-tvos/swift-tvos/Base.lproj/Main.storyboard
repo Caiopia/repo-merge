@@ -79,8 +79,17 @@
                                     <action selector="oom:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="7x2-OZ-Flv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-jU-OUu">
+                                <rect key="frame" x="111" y="750" width="413" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Signal"/>
+                                <connections>
+                                    <action selector="signal:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="SYu-wP-s2X"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="OOM adds text here" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04G-dQ-llR">
-                                <rect key="frame" x="111" y="765" width="413" height="247"/>
+                                <rect key="frame" x="111" y="886" width="413" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
