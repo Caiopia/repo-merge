@@ -99,6 +99,10 @@ class ViewController: UIViewController {
     
     @IBAction func notifyError(_ sender: Any) {
         NSLog("Notify handled error")
+        
+        Bugsnag.leaveBreadcrumb("This is a breadcrumb with metadata",
+                                metadata: ["authoer": "steve", "volume": 11], type: BSGBreadcrumbType.process)
+        
         do {
             throw NSError(domain: "com.bugsnag.example", code: 101, userInfo: [NSLocalizedDescriptionKey: "A handled error"])
         }
@@ -140,6 +144,22 @@ class ViewController: UIViewController {
     
     @IBAction func closeApp(_ sender: Any) {
         exit(0)
+    }
+    
+    /*
+     * Session control
+     */
+    
+    @IBAction func startSession(_ sender: Any) {
+        Bugsnag.startSession()
+    }
+    
+    @IBAction func pauseSession(_ sender: Any) {
+        Bugsnag.pauseSession()
+    }
+    
+    @IBAction func resumeSession(_ sender: Any) {
+        Bugsnag.resumeSession()
     }
 }
 
