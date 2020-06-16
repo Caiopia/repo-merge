@@ -10,14 +10,64 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var apiKey: String = "YOUR-API-KEY"
+    var config: BugsnagConfiguration
+
+    required init?(coder: NSCoder) {
+        config = BugsnagConfiguration(apiKey)
+        super.init(coder: coder)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        textView.text = ""
+        config = BugsnagConfiguration(apiKey)
     }
 
-    @IBOutlet weak var textView: UITextView!
 
+    /*
+     * Configure
+     */
+    @IBAction func rsCI(_ sender: Any) {
+        config.releaseStage = "CI"
+    }
+
+    @IBAction func rsProduction(_ sender: Any) {
+        config.releaseStage = "production"
+    }
+    
+    @IBAction func persistUser(_ sender: Any) {
+        config.setUser("Ms User", withEmail:"Not@real.fake", andName:"The Default User")
+        config.persistUser = true
+    }
+    
+    @IBAction func clearData(_ sender: Any) {
+        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+    }
+    
+    /*
+     * Starting Bugsnag
+     */
+    @IBAction func startFromPlist(_ sender: Any) {
+        Bugsnag.start()
+    }
+    
+    @IBAction func startWithApiKey(_ sender: Any) {
+        Bugsnag.start(withApiKey: apiKey)
+    }
+    
+    @IBAction func startWithConfig(_ sender: Any) {
+
+        config.appVersion = "1.5.0"
+        config.redactedKeys = ["password", "credit_card_number"]
+        config.enabledReleaseStages = ["production", "release"]
+
+        Bugsnag.start(with: config)
+
+    }
+    
     /*
      * Handled errors
      */
@@ -46,6 +96,7 @@ class ViewController: UIViewController {
      * Unhandled errors
      */
     @IBAction func uncaughtException(_ sender: Any) {
+        
         let someJson : Dictionary = ["foo":self]
         do {
             let data = try JSONSerialization.data(withJSONObject: someJson, options: .prettyPrinted)
@@ -62,25 +113,12 @@ class ViewController: UIViewController {
         }
         print("items: %@", items)
     }
-    
-    @IBAction func oom(_ sender: Any) {
-        let text = "var b = document.createElement('div'); div.innerHTML = 'Hello item %d'; document.documentElement.appendChild(div);\n";
-        for i in 0 ... (3000 * 1024) {
-            textView.text += text;
-            textView.setNeedsLayout()
-            if (i % 500 == 0) {
-                NSLog("Loaded %d items", i);
-            }
-        }
-
-    }
-    
+        
     /**
      This method causes a signal from the operating system to terminate the app.  Upon reopening the app this signal should be notified to your Bugsnag dashboard.
      */
     @IBAction func signal(_ sender: Any) {
         AnObjCClass().trap()
     }
-    
 }
 

@@ -19,23 +19,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Handled errors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5H-ZY-Jvr">
-                                <rect key="frame" x="192" y="60" width="247" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Configure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVr-LS-M8e">
+                                <rect key="frame" x="119" y="25" width="127" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unhandled errors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyV-yz-3Jp">
-                                <rect key="frame" x="192" y="352" width="290" height="46"/>
+                                <rect key="frame" x="412" y="523" width="223" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SX-BQ-s9d">
-                                <rect key="frame" x="111" y="130" width="413" height="86"/>
+                                <rect key="frame" x="731" y="86" width="306" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Notify exception"/>
                                 <connections>
@@ -43,18 +44,135 @@
                                     <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="UYf-5a-5Ra"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i2-tN-Vab">
-                                <rect key="frame" x="106" y="420" width="418" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWh-kJ-zhC">
+                                <rect key="frame" x="29" y="87" width="306" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Uncaught exception"/>
+                                <state key="normal" title="Production"/>
+                                <connections>
+                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="bD4-XW-Rgx"/>
+                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="JUd-zQ-dVW"/>
+                                    <action selector="releaseStageProduction:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="EbV-BP-HGs"/>
+                                    <action selector="rsProduction:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Uak-Ye-yzc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6al-WE-3xE">
+                                <rect key="frame" x="29" y="182" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="CI"/>
+                                <connections>
+                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="ugn-bg-vYA"/>
+                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Fhc-4I-zGX"/>
+                                    <action selector="rsCI:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="g7l-Hz-bv5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDE-EX-Q5g">
+                                <rect key="frame" x="29" y="283" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Persist user"/>
+                                <connections>
+                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="Iqv-Hd-XUc"/>
+                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="rUg-qm-xOU"/>
+                                    <action selector="persistUser:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="0ZZ-Wb-SEu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-ct-ghD">
+                                <rect key="frame" x="380" y="86" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="From plist"/>
+                                <connections>
+                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="1br-aF-bWm"/>
+                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="lEX-Mb-mdi"/>
+                                    <action selector="startFromPlist:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="dKS-LN-W93"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvM-UM-9fP">
+                                <rect key="frame" x="380" y="183" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="With API key"/>
+                                <connections>
+                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="Npw-yC-AU5"/>
+                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="A2K-mF-7jp"/>
+                                    <action selector="startWithApiKey:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="SrQ-IO-ebI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBe-Ul-b4G">
+                                <rect key="frame" x="380" y="282" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="With config"/>
+                                <connections>
+                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="eNL-Ah-TDc"/>
+                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="SDY-Jx-PvN"/>
+                                    <action selector="startWithConfig:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="BA2-gA-hEP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swS-9o-ZK8">
+                                <rect key="frame" x="380" y="381" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Manual  sessions"/>
+                                <connections>
+                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="nxZ-5j-Nwf"/>
+                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Dxg-Pp-Wcx"/>
+                                    <action selector="startWithConfig:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="0RJ-NS-e4i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i2-tN-Vab">
+                                <rect key="frame" x="380" y="578" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Exception"/>
                                 <connections>
                                     <action selector="uncaughtException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="7Fp-aG-Yr3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6z-5U-uWR">
-                                <rect key="frame" x="111" y="240" width="413" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouh-NW-2sn">
+                                <rect key="frame" x="29" y="776" width="306" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Start session"/>
+                                <connections>
+                                    <action selector="uncaughtException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="xxY-IK-jpL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-T4-cJh">
+                                <rect key="frame" x="29" y="875" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Pause session"/>
+                                <connections>
+                                    <action selector="uncaughtException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="8bY-v8-xZs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-Xj-2jA">
+                                <rect key="frame" x="29" y="980" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Resume session"/>
+                                <connections>
+                                    <action selector="uncaughtException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="NtI-Mh-Ii6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6z-5U-uWR">
+                                <rect key="frame" x="731" y="183" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Notify error"/>
                                 <connections>
@@ -62,47 +180,63 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdM-4C-3aA">
-                                <rect key="frame" x="106" y="530" width="418" height="86"/>
+                                <rect key="frame" x="380" y="677" width="306" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Stack overflow"/>
                                 <connections>
                                     <action selector="stackOverflow:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="WBM-tD-Qar"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwr-fl-v5n">
-                                <rect key="frame" x="106" y="640" width="418" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="OOM"/>
-                                <connections>
-                                    <action selector="oom:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="7x2-OZ-Flv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwc-jU-OUu">
-                                <rect key="frame" x="111" y="750" width="413" height="86"/>
+                                <rect key="frame" x="423" y="1086" width="306" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Signal"/>
                                 <connections>
                                     <action selector="signal:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="SYu-wP-s2X"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="OOM adds text here" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04G-dQ-llR">
-                                <rect key="frame" x="111" y="886" width="413" height="126"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Bugsnag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq6-x5-FVi">
+                                <rect key="frame" x="442" y="25" width="183" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manual sessions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZO-BW-v1V">
+                                <rect key="frame" x="76" y="697" width="213" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Handled errors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5H-ZY-Jvr">
+                                <rect key="frame" x="789" y="25" width="190" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96J-Az-q4W">
+                                <rect key="frame" x="29" y="381" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Clear data"/>
+                                <connections>
+                                    <action selector="clearData:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="gO9-mj-58W"/>
+                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="Kdv-JH-WUZ"/>
+                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="9MW-f5-Ac9"/>
+                                    <action selector="persistUser:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="MS3-Lk-73P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
-                    <connections>
-                        <outlet property="textView" destination="04G-dQ-llR" id="Ihv-u7-nR3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="hER-eJ-LLG" userLabel="Exit" sceneMemberID="exit"/>
