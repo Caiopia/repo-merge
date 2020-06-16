@@ -40,7 +40,6 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Notify exception"/>
                                 <connections>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="ZOT-at-DOI"/>
                                     <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="UYf-5a-5Ra"/>
                                 </connections>
                             </button>
@@ -51,10 +50,7 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Production"/>
                                 <connections>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="bD4-XW-Rgx"/>
-                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="JUd-zQ-dVW"/>
-                                    <action selector="releaseStageProduction:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="EbV-BP-HGs"/>
-                                    <action selector="rsProduction:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Uak-Ye-yzc"/>
+                                    <action selector="rsProduction:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="fKf-1a-JRc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6al-WE-3xE">
@@ -64,8 +60,6 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="CI"/>
                                 <connections>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="ugn-bg-vYA"/>
-                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Fhc-4I-zGX"/>
                                     <action selector="rsCI:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="g7l-Hz-bv5"/>
                                 </connections>
                             </button>
@@ -76,9 +70,17 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Persist user"/>
                                 <connections>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="Iqv-Hd-XUc"/>
-                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="rUg-qm-xOU"/>
                                     <action selector="persistUser:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="0ZZ-Wb-SEu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96J-Az-q4W">
+                                <rect key="frame" x="29" y="381" width="306" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Clear data"/>
+                                <connections>
+                                    <action selector="clearData:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="gO9-mj-58W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-ct-ghD">
@@ -88,8 +90,6 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="From plist"/>
                                 <connections>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="1br-aF-bWm"/>
-                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="lEX-Mb-mdi"/>
                                     <action selector="startFromPlist:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="dKS-LN-W93"/>
                                 </connections>
                             </button>
@@ -100,8 +100,6 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="With API key"/>
                                 <connections>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="Npw-yC-AU5"/>
-                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="A2K-mF-7jp"/>
                                     <action selector="startWithApiKey:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="SrQ-IO-ebI"/>
                                 </connections>
                             </button>
@@ -112,8 +110,6 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="With config"/>
                                 <connections>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="eNL-Ah-TDc"/>
-                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="SDY-Jx-PvN"/>
                                     <action selector="startWithConfig:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="BA2-gA-hEP"/>
                                 </connections>
                             </button>
@@ -124,9 +120,7 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Manual  sessions"/>
                                 <connections>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="nxZ-5j-Nwf"/>
-                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Dxg-Pp-Wcx"/>
-                                    <action selector="startWithConfig:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="0RJ-NS-e4i"/>
+                                    <action selector="manualSessions:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="bOJ-wi-3sd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i2-tN-Vab">
@@ -145,9 +139,6 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Start session"/>
-                                <connections>
-                                    <action selector="uncaughtException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="xxY-IK-jpL"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zn-T4-cJh">
                                 <rect key="frame" x="29" y="875" width="306" height="75"/>
@@ -155,9 +146,6 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Pause session"/>
-                                <connections>
-                                    <action selector="uncaughtException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="8bY-v8-xZs"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-Xj-2jA">
                                 <rect key="frame" x="29" y="980" width="306" height="75"/>
@@ -165,9 +153,6 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Resume session"/>
-                                <connections>
-                                    <action selector="uncaughtException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="NtI-Mh-Ii6"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6z-5U-uWR">
                                 <rect key="frame" x="731" y="183" width="306" height="75"/>
@@ -220,17 +205,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96J-Az-q4W">
-                                <rect key="frame" x="29" y="381" width="306" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-VU-ib5">
+                                <rect key="frame" x="731" y="981" width="306" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Clear data"/>
+                                <state key="normal" title="Exit"/>
                                 <connections>
-                                    <action selector="clearData:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="gO9-mj-58W"/>
-                                    <action selector="notify:" destination="hER-eJ-LLG" eventType="primaryActionTriggered" id="Kdv-JH-WUZ"/>
-                                    <action selector="notifyException:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="9MW-f5-Ac9"/>
-                                    <action selector="persistUser:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="MS3-Lk-73P"/>
+                                    <action selector="closeApp:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="UfJ-T6-nt2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -239,7 +221,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="hER-eJ-LLG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="69" y="69"/>
         </scene>

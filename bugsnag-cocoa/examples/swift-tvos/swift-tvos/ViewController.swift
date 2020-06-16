@@ -30,12 +30,12 @@ class ViewController: UIViewController {
     /*
      * Configure
      */
-    @IBAction func rsCI(_ sender: Any) {
-        config.releaseStage = "CI"
-    }
-
     @IBAction func rsProduction(_ sender: Any) {
         config.releaseStage = "production"
+    }
+
+    @IBAction func rsCI(_ sender: Any) {
+        config.releaseStage = "CI"
     }
     
     @IBAction func persistUser(_ sender: Any) {
@@ -65,8 +65,17 @@ class ViewController: UIViewController {
         config.enabledReleaseStages = ["production", "release"]
 
         Bugsnag.start(with: config)
-
     }
+    
+    @IBAction func manualSessions(_ sender: Any) {
+        config.appVersion = "2.6.0"
+        config.redactedKeys = ["password", "credit_card_number"]
+        config.enabledReleaseStages = ["production", "release"]
+        config.autoTrackSessions = false
+        
+        Bugsnag.start(with: config)
+    }
+    
     
     /*
      * Handled errors
@@ -119,6 +128,11 @@ class ViewController: UIViewController {
      */
     @IBAction func signal(_ sender: Any) {
         AnObjCClass().trap()
+    }
+    
+    
+    @IBAction func closeApp(_ sender: Any) {
+        exit(0)
     }
 }
 
