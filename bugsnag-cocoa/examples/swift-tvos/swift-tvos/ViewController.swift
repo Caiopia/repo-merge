@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var config: BugsnagConfiguration
 
     required init?(coder: NSCoder) {
+        NSLog("Config created with API key: " + apiKey)
         config = BugsnagConfiguration(apiKey)
         super.init(coder: coder)
 
@@ -51,26 +52,29 @@ class ViewController: UIViewController {
      * Starting Bugsnag
      */
     @IBAction func startFromPlist(_ sender: Any) {
+        NSLog("Start from plist")
         Bugsnag.start()
     }
     
     @IBAction func startWithApiKey(_ sender: Any) {
+        NSLog("Start with API key")
         Bugsnag.start(withApiKey: apiKey)
     }
     
     @IBAction func startWithConfig(_ sender: Any) {
+        NSLog("Start with config")
 
         config.appVersion = "1.5.0"
         config.redactedKeys = ["password", "credit_card_number"]
-        config.enabledReleaseStages = ["production", "release"]
 
         Bugsnag.start(with: config)
     }
     
     @IBAction func manualSessions(_ sender: Any) {
+        NSLog("Start from config with manual sessions")
+        
         config.appVersion = "2.6.0"
         config.redactedKeys = ["password", "credit_card_number"]
-        config.enabledReleaseStages = ["production", "release"]
         config.autoTrackSessions = false
         
         Bugsnag.start(with: config)
@@ -81,6 +85,7 @@ class ViewController: UIViewController {
      * Handled errors
      */
     @IBAction func notifyException(_ sender: Any) {
+        NSLog("Notify handled exception")
         do {
             try FileManager.default.removeItem(atPath:"//invalid/file")
         } catch {
@@ -93,6 +98,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func notifyError(_ sender: Any) {
+        NSLog("Notify handled error")
         do {
             throw NSError(domain: "com.bugsnag.example", code: 101, userInfo: [NSLocalizedDescriptionKey: "A handled error"])
         }
@@ -105,7 +111,8 @@ class ViewController: UIViewController {
      * Unhandled errors
      */
     @IBAction func uncaughtException(_ sender: Any) {
-        
+        NSLog("Uncaught exception")
+
         let someJson : Dictionary = ["foo":self]
         do {
             let data = try JSONSerialization.data(withJSONObject: someJson, options: .prettyPrinted)
